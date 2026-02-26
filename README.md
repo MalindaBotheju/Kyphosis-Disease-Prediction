@@ -1,43 +1,42 @@
-# 🩺 Kyphosis Disease Prediction: End-to-End ML Solution
+# 🩺 Kyphosis Disease Prediction AI
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-Framework-lightgrey?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)](https://scikit-learn.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind--CSS-UI-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 
-An AI-powered medical screening tool designed to predict the presence of Kyphosis deformity in pediatric patients following spinal surgery. This project bridges the gap between raw data science and a functional medical dashboard.
+An AI-powered clinical decision support tool designed to predict the presence of Kyphosis deformity in pediatric patients following spinal surgery.
 
-## 📊 Project Performance
-Our Tuned SVM model was specifically optimized for **medical safety** by prioritizing Recall over simple Accuracy:
+## 📌 Project Overview
+This project applies a **Tuned Support Vector Machine (SVM)** classifier to clinical data. The goal is to assist medical professionals in post-operative screening. Unlike standard models, this was optimized for **medical safety**, prioritizing the detection of actual cases (Recall) over simple accuracy.
 
-* **Recall (Medically Critical):** 75% for 'Present' cases — ensuring fewer sick patients are missed.
-* **Accuracy:** 76%.
-* **Dataset:** 81 clinical patient records.
+### 🧪 Medical Comparison
+| Normal Spine | Kyphotic Deformity |
+| :---: | :---: |
+| ![Normal](static/normal.png) | ![Kyphosis](static/kyphosis.png) |
+| *Expected post-op alignment* | *Post-op complications detected* |
 
 ---
 
-## 🖥️ User Interface & Experience
-The application features a modern, responsive dashboard built with **Flask** and **Tailwind CSS**.
+## 🖥️ Dashboard UI
+The application provides a real-time interface for screening.
 
-| Patient Screening (Input) | Prediction Result (Output) |
+| Case: No Kyphosis Detected | Case: Kyphosis Detected |
 | :--- | :--- |
-| ![Screening UI](https://raw.githubusercontent.com/MalindaBotheju/Kyphosis-Disease-Prediction/master/static/normal_detection.png) | ![Result UI](https://raw.githubusercontent.com/MalindaBotheju/Kyphosis-Disease-Prediction/master/static/detection.png) |
-
-> **Persistence Feature:** The dashboard is designed to retain user input after prediction, allowing medical staff to quickly adjust variables without re-typing data.
+| ![Normal Result](static/normal_detection.png) | ![Detected Result](static/detection.png) |
 
 ---
 
-## 🛠️ Technical Stack & Files
-* **Core:** Python, Scikit-Learn, Pandas, Numpy
-* **Backend:** Flask
-* **Frontend:** HTML5, Tailwind CSS (via CDN)
-* **Model Deployment:** Joblib serialization
-
-### Repository Structure
-- `app.py`: The Flask server and prediction logic.
-- `kyphosis_svm_model.pkl`: The "Brain" (Tuned SVM Model).
-- `kyphosis_scaler.pkl`: The "Translator" (StandardScaler).
-- `kyphosis.ipynb`: The complete research, EDA, and model tuning notebook.
-- `templates/` & `static/`: Frontend assets and medical diagrams.
+## 📊 Model Performance
+* **Recall (Sensitivity):** 75% — *Optimized to ensure 3 out of 4 positive cases are caught.*
+* **Accuracy:** 76% 
+* **Model Type:** Support Vector Machine (RBF Kernel)
+* **Scaling:** StandardScaler (Z-score normalization)
 
 ---
 
-## 🚀 Installation & Local Deployment
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/MalindaBotheju/Kyphosis-Disease-Prediction.git](https://github.com/MalindaBotheju/Kyphosis-Disease-Prediction.git)
+## 🛠️ Repository Structure
+- `app.py`: Flask backend and prediction API.
+- `kyphosis_svm_model.pkl`: Pre-trained SVM "Brain".
+- `kyphosis_scaler.pkl`: Input "Translator".
+- `kyphosis.ipynb`: Full EDA, Data Cleaning, and Model Training history.
+- `requirements.txt`: List of dependencies for deployment.
