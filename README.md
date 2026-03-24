@@ -1,7 +1,5 @@
 # 🩺 Kyphosis Disease Prediction AI
 
-[![Live Demo](https://img.shields.io/badge/LIVE%20DEMO-CLICK%20HERE-brightgreen?style=for-the-badge)](https://kyphosis-disease-prediction.onrender.com) *(Note: As this is hosted on a free tier, the server may take 30-50 seconds on the first load. Thank you for your patience!)*
-
 ## 📌 Project Overview
 This project applies a **Tuned Support Vector Machine (SVM)** classifier to clinical data. The goal is to assist medical professionals in post-operative screening. Unlike standard models, this was optimized for **medical safety**, prioritizing the detection of actual cases (Recall) over simple accuracy.
 
