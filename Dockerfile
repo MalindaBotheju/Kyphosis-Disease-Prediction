@@ -1,0 +1,20 @@
+# 1. We tell Docker to bring its own specific, stable Python version (3.11)
+FROM python:3.11-slim
+
+# 2. We create a working directory inside the Docker container
+WORKDIR /app
+
+# 3. We copy your strict requirements.txt file into the container
+COPY requirements.txt .
+
+# 4. We tell Docker to install your exact pinned versions
+RUN pip install -r requirements.txt
+
+# 5. We copy the rest of your project files (like app.py and your .pkl files)
+COPY . .
+
+# 6. We expose port 5000 (which Flask uses by default)
+EXPOSE 5000
+
+# 7. We tell Docker exactly how to start the app
+CMD ["python", "app.py"]
