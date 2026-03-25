@@ -8,7 +8,7 @@ Kyphosis Disease Prediction AI is a clinical decision support tool designed to q
 ### 🧪 Medical Comparison
 | Normal Spine | Kyphotic Deformity |
 | :---: | :---: |
-| ![Normal](static/normal.png) | ![Kyphosis](static/kyphosis.png) |
+| ![Normal](screenshots/normal.png) | ![Kyphosis](screenshots/kyphosis.png) |
 
 ---
 
@@ -17,7 +17,7 @@ The application provides a real-time interface for screening.
 
 | Case: No Kyphosis Detected | Case: Kyphosis Detected |
 | :--- | :--- |
-| ![Normal Result](static/normal_detection.png) | ![Detected Result](static/detection.png) |
+| ![Normal Result](screenshots/normal_detection.png) | ![Detected Result](screenshots/detection.png) |
 
 ---
 
