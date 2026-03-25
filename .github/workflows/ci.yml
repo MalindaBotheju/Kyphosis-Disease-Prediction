@@ -1,0 +1,22 @@
+name: Kyphosis CI Pipeline
+
+# Tell the robot WHEN to run (every time you push to main)
+on:
+  push:
+    branches: [ "main" ]
+
+# Tell the robot WHAT to do
+jobs:
+  test-docker-build:
+    runs-on: ubuntu-latest # The robot spins up a temporary Linux server
+
+    steps:
+    - name: 📥 Download latest code
+      uses: actions/checkout@v4
+
+    - name: 🐳 Set up Docker
+      uses: docker/setup-buildx-action@v3
+
+    - name: ⚙️ Test Docker Build (Quality Check)
+      # This tests if your app can successfully build without crashing
+      run: docker build -t kyphosis-test .
