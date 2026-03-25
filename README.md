@@ -35,3 +35,14 @@ The application provides a real-time interface for screening.
 - `kyphosis_scaler.pkl`: Input "Translator".
 - `kyphosis.ipynb`: Full EDA, Data Cleaning, and Model Training history.
 - `requirements.txt`: List of dependencies for deployment.
+
+---
+
+## 🚀 How to Run Locally
+
+If you want to run this application on your own machine, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/MalindaBotheju/Kyphosis-Disease-Prediction.git](https://github.com/MalindaBotheju/Kyphosis-Disease-Prediction.git)
+   cd your-repo-name
