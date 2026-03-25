@@ -54,13 +54,15 @@ Before you begin, ensure you have the following installed:
    ```bash
    cd Kyphosis-Disease-Prediction
 
-2. **Build the Docker image:**
+2. **Open Docker Desktop**
+
+3. **Build the Docker image:**
    ```bash
    docker build -t kyphosis-app .
 
-3. **Run the container:**
+4. **Run the container:**
    ```bash
    docker run -p 5000:5000 kyphosis-app
 
-4. **Open in your browser:**
+5. **Open in your browser:**
    Go to http://127.0.0.1:5000/ to use the dashboard.
