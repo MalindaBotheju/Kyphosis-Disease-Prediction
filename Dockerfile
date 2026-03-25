@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # 7. We tell Docker exactly how to start the app
-CMD ["python", "app.py"]
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
