@@ -40,7 +40,12 @@ The application provides a real-time interface for screening.
 
 ## 🚀 How to Run Locally
 
-If you want to run this application on your own machine, follow these steps:
+## Prerequisites
+Before you begin, ensure you have the following installed:
+* **Git:** To clone the repository.
+* **Docker (Recommended):** For running the application in an isolated, 100% reproducible environment.
+
+---
 
 1. **Clone the repository:**
    ```bash
@@ -49,29 +54,13 @@ If you want to run this application on your own machine, follow these steps:
    ```bash
    cd Kyphosis-Disease-Prediction
 
-2. **Create and activate a virtual environment (Recommended):**
-   
-   Windows:
+2. **Build the Docker image:**
    ```bash
-   python -m venv venv
-   ```
-   ```bash
-   venv\Scripts\activate
-   ```
-   Mac/Linux:
-   ```bash
-   python3 -m venv venv
-   ```
-   ```bash
-   source venv/bin/activate
+   docker build -t kyphosis-app .
 
-3. **Install the required dependencies:**
+3. **Run the container:**
    ```bash
-   pip install -r requirements.txt
+   docker run -p 5000:5000 kyphosis-app
 
-4. **Run the Flask application:**
-   ```bash
-   python app.py
-
-5. **Open in your browser:**
+4. **Open in your browser:**
    Go to http://127.0.0.1:5000/ to use the dashboard.
