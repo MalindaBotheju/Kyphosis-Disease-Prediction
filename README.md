@@ -45,6 +45,8 @@ If you want to run this application on your own machine, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/MalindaBotheju/Kyphosis-Disease-Prediction.git
+   ```
+   ```bash
    cd Kyphosis-Disease-Prediction
 
 2. **Install the required dependencies:**
