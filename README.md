@@ -1,5 +1,7 @@
 # 🩺 Kyphosis Disease Prediction AI
 
+[![Live Demo](https://img.shields.io/badge/LIVE%20DEMO-CLICK%20HERE-brightgreen?style=for-the-badge)](https://kyphosis-disease-prediction.onrender.com)
+
 ## 📌 Project Overview
 Kyphosis Disease Prediction AI is a clinical decision support tool designed to quickly screen patients for Kyphosis (a spinal deformity). By inputting three basic clinical metrics-the patient's age, the number of vertebrae involved, and the starting vertebra-the application instantly predicts whether the disease is present. Built with Python and Flask, the underlying SVM model is uniquely optimized for medical safety, prioritizing high Recall to ensure positive cases are successfully caught.
 
