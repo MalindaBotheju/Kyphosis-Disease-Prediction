@@ -49,13 +49,29 @@ If you want to run this application on your own machine, follow these steps:
    ```bash
    cd Kyphosis-Disease-Prediction
 
-2. **Install the required dependencies:**
+2. **Create and activate a virtual environment (Recommended):**
+   
+   Windows:
+   ```bash
+   python -m venv venv
+   ```
+   ```bash
+   venv\Scripts\activate
+   ```
+   Mac/Linux:
+   ```bash
+   python3 -m venv venv
+   ```
+   ```bash
+   source venv/bin/activate
+
+3. **Install the required dependencies:**
    ```bash
    pip install -r requirements.txt
 
-3. **Run the Flask application:**
+4. **Run the Flask application:**
    ```bash
    python app.py
 
-4. **Open in your browser:**
+5. **Open in your browser:**
    Go to http://127.0.0.1:5000/ to use the dashboard.
