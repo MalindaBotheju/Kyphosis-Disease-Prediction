@@ -43,7 +43,7 @@ The application provides a real-time interface for screening.
 ## Prerequisites
 Before you begin, ensure you have the following installed:
 * **Git:** To clone the repository.
-* **Docker (Recommended):** For running the application in an isolated, 100% reproducible environment.
+* **Docker:** For running the application in an isolated, 100% reproducible environment.
 
 ---
 
