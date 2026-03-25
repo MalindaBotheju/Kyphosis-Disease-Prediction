@@ -1,22 +1,33 @@
 name: Kyphosis CI Pipeline
 
-# Tell the robot WHEN to run (every time you push to main)
 on:
   push:
     branches: [ "main" ]
 
-# Tell the robot WHAT to do
 jobs:
-  test-docker-build:
-    runs-on: ubuntu-latest # The robot spins up a temporary Linux server
+  test-and-build:
+    runs-on: ubuntu-latest 
 
     steps:
     - name: 📥 Download latest code
       uses: actions/checkout@v4
 
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11' # Matches your Dockerfile!
+
+    - name: 📦 Install Requirements
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: 🧪 Run Automated Tests (pytest)
+      # This runs your test_app.py file! If tests fail, the pipeline stops here.
+      run: pytest
+
     - name: 🐳 Set up Docker
       uses: docker/setup-buildx-action@v3
 
-    - name: ⚙️ Test Docker Build (Quality Check)
-      # This tests if your app can successfully build without crashing
+    - name: ⚙️ Test Docker Build
       run: docker build -t kyphosis-test .
