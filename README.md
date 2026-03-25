@@ -46,3 +46,14 @@ If you want to run this application on your own machine, follow these steps:
    ```bash
    git clone [https://github.com/MalindaBotheju/Kyphosis-Disease-Prediction.git](https://github.com/MalindaBotheju/Kyphosis-Disease-Prediction.git)
    cd your-repo-name
+
+2. **Install the required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+
+3. **Run the Flask application:**
+   ```bash
+   python app.py
+
+4. **Open in your browser:**
+   Go to http://127.0.0.1:5000/ to use the dashboard.
